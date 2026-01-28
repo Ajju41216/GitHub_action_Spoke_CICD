@@ -9,9 +9,20 @@ jobs:
   deploy:
     runs-on: self-hosted
     steps:
+      # Step 1: Checkout the repo
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Deploy Kubernetes resources
+      # Step 2: Deploy frontend
+      - name: Apply Frontend Deployment
         run: |
-          kubectl apply -f k8s/journal/frontend/
+          kubectl apply -f frontend/frontend.yaml
+
+      # Step 3: Deploy other resources (optional)
+      - name: Apply Fileserver
+        run: |
+          kubectl apply -f fileserver/
+
+      - name: Apply Redis
+        run: |
+          kubectl apply -f redis/
