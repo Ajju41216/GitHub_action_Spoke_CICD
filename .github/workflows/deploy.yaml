@@ -17,12 +17,3 @@ jobs:
       - name: Apply Frontend Deployment
         run: |
           kubectl apply -f frontend/frontend.yaml
-
-      # Step 3: Deploy other resources (optional)
-      - name: Apply Fileserver
-        run: |
-          kubectl apply -f fileserver/
-
-      - name: Apply Redis
-        run: |
-          kubectl apply -f redis/
