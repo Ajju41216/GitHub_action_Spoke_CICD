@@ -6,10 +6,13 @@ on:
       - main
 
 jobs:
-  test-runner:
+  test:
     runs-on: self-hosted
     steps:
-      - name: Check running machine
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Print info from runner
         run: |
           echo "Hello from self-hosted runner!"
           echo "Hostname: $(hostname)"
