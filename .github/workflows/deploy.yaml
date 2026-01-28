@@ -17,3 +17,5 @@ jobs:
       - name: Apply Frontend Deployment
         run: |
           kubectl apply -f frontend/frontend.yaml
+          kubectl apply -f frontend/Service.yaml
+          kubectl apply -f frontend/ingress.yaml
