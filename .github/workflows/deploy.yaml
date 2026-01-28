@@ -1,19 +1,17 @@
-name: Test Self-Hosted Runner
+name: Deploy to Docker Desktop Kubernetes
 
 on:
   push:
     branches:
-      - master
+      - master  # your branch
 
 jobs:
-  test:
+  deploy:
     runs-on: self-hosted
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Print info from runner
+      - name: Deploy Kubernetes resources
         run: |
-          echo "Hello from self-hosted runner!"
-          echo "Hostname: $(hostname)"
-          whoami
+          kubectl apply -f k8s/journal/frontend/
