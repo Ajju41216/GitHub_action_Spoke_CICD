@@ -6,3 +6,14 @@ ReplicaSet
 Request=Limit=predictability
 template = Template is required because the Deployment creates a ReplicaSet, and the ReplicaSet uses the template to create Pod
 spec inside spec = in Deployment we use 1st for Deployment 2nd for containers inside the Deployment
+
+
+
+Lab to test the network limiation via network policy
+
+POD to Pod
+NameSPace to NameSPace
+Service to Service
+Pod to ingress
+Pod to egress
+
