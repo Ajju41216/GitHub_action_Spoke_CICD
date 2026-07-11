@@ -3,10 +3,10 @@
 hub_subscription_id   = "e4856824-3c90-41f7-9af3-cd62168c4d4e"
 spoke_subscription_id = "1ebca6dc-4adb-4bd0-9460-6bd7dbaf2ce4"
 
-# hub_state_rg              = "terraformBackend-rg"
-# hub_state_storage_account = "terraforms23tatplatform"
-# hub_state_container       = "tfstate"
-# hub_state_key             = "prod-dev.tfstate"
+hub_state_rg              = "terraformBackend-rg"
+hub_state_storage_account = "terraforms23tatplatform"
+hub_state_container       = "tfstate"
+hub_state_key             = "prod-dev.tfstate"
 
 hub_vnet_key = "hub"
 hub_rg_key   = "hub"
