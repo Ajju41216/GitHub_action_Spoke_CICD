@@ -45,10 +45,13 @@ jobs:
         run: terraform validate
         working-directory: ./terraform/Spoke1
 
+      - name: Terraform plan
+        working-directory: ./terraform/Spoke1
+        run: terraform plan -input=false -out=tfplan      
+
       - name: Terraform apply
         run: terraform apply -auto-approve
         working-directory: ./terraform/Spoke1      
-        
 
       - name: Debug Terraform Context
         working-directory: ./terraform/Spoke1
