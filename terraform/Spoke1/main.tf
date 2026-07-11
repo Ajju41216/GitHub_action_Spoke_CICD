@@ -1,11 +1,26 @@
+# data "terraform_remote_state" "hub" {
+#   backend = "azurerm"
+
+#   config = {
+#     resource_group_name  = "terraformBackend-rg"
+#     storage_account_name = "terraforms23tatplatform"
+#     container_name       = "tfstate"
+#     key                  = "prod-dev.tfstate"
+#   }
+# }
+
 data "terraform_remote_state" "hub" {
   backend = "azurerm"
 
   config = {
+    subscription_id      = "e4856824-3c90-41f7-9af3-cd62168c4d4e"
     resource_group_name  = "terraformBackend-rg"
     storage_account_name = "terraforms23tatplatform"
     container_name       = "tfstate"
     key                  = "prod-dev.tfstate"
+
+    use_oidc         = true
+    use_azuread_auth = true
   }
 }
 
