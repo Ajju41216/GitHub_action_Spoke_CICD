@@ -39,19 +39,19 @@ jobs:
 
       - name: Terraform Init
         run: terraform init -input=false
-        working-directory: ./terraform
+        working-directory: ./terraform/Spoke1
 
       - name: Terraform Validate
         run: terraform validate
-        working-directory: ./terraform
+        working-directory: ./terraform/Spoke1
 
       - name: Terraform apply
         run: terraform apply -auto-approve
-        working-directory: ./terraform      
+        working-directory: ./terraform/Spoke1      
         
 
       - name: Debug Terraform Context
-        working-directory: ./terraform
+        working-directory: ./terraform/Spoke1
         run: |
           pwd
           ls -la
