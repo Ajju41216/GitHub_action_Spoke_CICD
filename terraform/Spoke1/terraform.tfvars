@@ -8,8 +8,8 @@ hub_state_storage_account = "terraforms23tatplatform"
 hub_state_container       = "tfstate"
 hub_state_key             = "prod-dev.tfstate"
 
-hub_vnet_key = "hub"
-hub_rg_key   = "hub"
+hub_vnet_key = "mainvet"
+hub_rg_key   = "rg1"
 
 location        = "centralindia"
 spoke_rg_name   = "rg-spoke-app1-prod-ci"
