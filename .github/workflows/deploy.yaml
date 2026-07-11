@@ -45,18 +45,18 @@ jobs:
         run: terraform validate
         working-directory: ./terraform/Spoke1
 
-      - name: Terraform plan
-        working-directory: ./terraform/Spoke1
-        run: terraform plan -input=false -out=tfplan      
+      # - name: Terraform plan
+      #   working-directory: ./terraform/Spoke1
+      #   run: terraform plan -input=false -out=tfplan      
 
-      - name: Terraform apply
-        run: terraform apply -auto-approve
-        working-directory: ./terraform/Spoke1      
+      # - name: Terraform apply
+      #   run: terraform apply -auto-approve
+      #   working-directory: ./terraform/Spoke1      
 
-      - name: Debug Terraform Context
-        working-directory: ./terraform/Spoke1
-        run: |
-          pwd
-          ls -la
-          echo "---- tfvars content ----"
-          cat terraform.tfvars      
+      # - name: Debug Terraform Context
+      #   working-directory: ./terraform/Spoke1
+      #   run: |
+      #     pwd
+      #     ls -la
+      #     echo "---- tfvars content ----"
+      #     cat terraform.tfvars      
